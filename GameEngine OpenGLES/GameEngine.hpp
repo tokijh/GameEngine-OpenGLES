@@ -12,12 +12,12 @@
 #include <stdio.h>
 #include <OpenGLES/ES3/gl.h>
 #include "GLES.hpp"
+#include "Triangle2D.hpp"
 
 class GameEngine {
-    private :
+private:
     GameEngine();
-    
-    public :
+public:
     static GameEngine &getInstance();
     static void destroy();
     

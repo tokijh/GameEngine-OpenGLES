@@ -18,6 +18,8 @@
 		60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60575CF21EAF261000B8EDE6 /* GameEngineWrapper.mm */; };
 		60575CF61EAF269600B8EDE6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60575CF51EAF269600B8EDE6 /* OpenGLES.framework */; };
 		60575CF91EAF536200B8EDE6 /* GLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CF71EAF536200B8EDE6 /* GLES.cpp */; };
+		60575CFD1EAF702000B8EDE6 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CFB1EAF702000B8EDE6 /* Object.cpp */; };
+		60575D021EAF70AB00B8EDE6 /* Triangle2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575D001EAF70AB00B8EDE6 /* Triangle2D.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,13 @@
 		60575CF51EAF269600B8EDE6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		60575CF71EAF536200B8EDE6 /* GLES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLES.cpp; sourceTree = "<group>"; };
 		60575CF81EAF536200B8EDE6 /* GLES.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLES.hpp; sourceTree = "<group>"; };
+		60575CFB1EAF702000B8EDE6 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		60575CFC1EAF702000B8EDE6 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
+		60575D001EAF70AB00B8EDE6 /* Triangle2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle2D.cpp; sourceTree = "<group>"; };
+		60575D011EAF70AB00B8EDE6 /* Triangle2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Triangle2D.hpp; sourceTree = "<group>"; };
+		60575D051EAF717000B8EDE6 /* Vector3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
+		60575D061EAF71C800B8EDE6 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		60575D081EAF721300B8EDE6 /* Vector4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +155,11 @@
 		60575CEC1EAF25B200B8EDE6 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				60575D031EAF715100B8EDE6 /* Vector */,
 				60575CEE1EAF25CD00B8EDE6 /* GameEngine.cpp */,
 				60575CEF1EAF25CD00B8EDE6 /* GameEngine.hpp */,
 				60575CFA1EAF5A2F00B8EDE6 /* GLES */,
+				60575CFE1EAF706B00B8EDE6 /* Object */,
 			);
 			name = GameEngine;
 			sourceTree = "<group>";
@@ -168,6 +179,51 @@
 				60575CF81EAF536200B8EDE6 /* GLES.hpp */,
 			);
 			name = GLES;
+			sourceTree = "<group>";
+		};
+		60575CFE1EAF706B00B8EDE6 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				60575CFF1EAF709500B8EDE6 /* Triangle2D */,
+				60575CFB1EAF702000B8EDE6 /* Object.cpp */,
+				60575CFC1EAF702000B8EDE6 /* Object.hpp */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
+		60575CFF1EAF709500B8EDE6 /* Triangle2D */ = {
+			isa = PBXGroup;
+			children = (
+				60575D001EAF70AB00B8EDE6 /* Triangle2D.cpp */,
+				60575D011EAF70AB00B8EDE6 /* Triangle2D.hpp */,
+			);
+			name = Triangle2D;
+			sourceTree = "<group>";
+		};
+		60575D031EAF715100B8EDE6 /* Vector */ = {
+			isa = PBXGroup;
+			children = (
+				60575D041EAF715700B8EDE6 /* Vector3 */,
+				60575D071EAF71FA00B8EDE6 /* Vector4 */,
+				60575D061EAF71C800B8EDE6 /* Vector.h */,
+			);
+			name = Vector;
+			sourceTree = "<group>";
+		};
+		60575D041EAF715700B8EDE6 /* Vector3 */ = {
+			isa = PBXGroup;
+			children = (
+				60575D051EAF717000B8EDE6 /* Vector3.h */,
+			);
+			name = Vector3;
+			sourceTree = "<group>";
+		};
+		60575D071EAF71FA00B8EDE6 /* Vector4 */ = {
+			isa = PBXGroup;
+			children = (
+				60575D081EAF721300B8EDE6 /* Vector4.h */,
+			);
+			name = Vector4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +364,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60575D021EAF70AB00B8EDE6 /* Triangle2D.cpp in Sources */,
 				60575CF01EAF25CD00B8EDE6 /* GameEngine.cpp in Sources */,
 				60575CC11EAF253900B8EDE6 /* ViewController.swift in Sources */,
+				60575CFD1EAF702000B8EDE6 /* Object.cpp in Sources */,
 				60575CBF1EAF253900B8EDE6 /* AppDelegate.swift in Sources */,
 				60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */,
 				60575CF91EAF536200B8EDE6 /* GLES.cpp in Sources */,
