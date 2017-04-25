@@ -32,24 +32,47 @@ void GameEngine::destroy() {
 
 void GameEngine::onCreated() {
     printf("onCreated\n");
+    
+    GLES::makeProgram();
+    
+    glEnableVertexAttribArray(GLES::positionHandle);
 }
 
 void GameEngine::onChanged(int width, int height) {
     printf("onChanged width : %d height : %d\n", width, height);
+    
+    glViewport(0, 0, width, height);
 }
 
 void GameEngine::onDraw() {
 //    printf("onDraw\n");
     
-    static float a = 0.0f;
+    // To change red color
+    static float red_color = 0.0f;
     
-    glClearColor(1.0f, a, 0.2f, 1.0f);
+    // Vertexs of a Triangle
+    static float triangle_vertexs[] = {
+        0.0f, 1.0f, 0.0f,
+        -1.0f, -1.0f, 0.0f,
+        1.0f, -1.0f, 0.0f
+    };
+    
+    // Increase red color
+    red_color = red_color + 0.01f;
+    if (red_color > 1.0f) {
+        red_color = 0.0f;
+    }
+    
+    // Clear background by color
+    glClearColor(1.0f, red_color, 0.2f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    a = a + 0.01f;
-    if (a > 1.0f) {
-        a = 0.0f;
-    }
+    // Reverse color with background
+    glUniform4f(GLES::colorHandle, 1.0f, 1.0f - red_color, 0.2f, 1.0f);
+    
+    glVertexAttribPointer(GLES::positionHandle, 3, GL_FLOAT, false, 0, triangle_vertexs);
+    
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }
 
 void GameEngine::onTouch(int eventsCount, int **touchInfo) {

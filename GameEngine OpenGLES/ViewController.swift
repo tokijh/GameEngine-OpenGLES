@@ -14,10 +14,11 @@ class ViewController: GLKViewController {
     
     var gameEngine: GameEngineWrapper!
     
+    var isCreated: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initGameView()
-        initGameEngine()
     }
     
     func initGameEngine() {
@@ -40,16 +41,24 @@ class ViewController: GLKViewController {
     }
     
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
+        if !isCreated {
+            initGameEngine()
+            isCreated = true
+        }
         gameEngine.onDraw()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         // UIDevice.current.orientation.isLandscape // 화면 가로 세로 확인
-        setDeviceWindow()
+        if gameEngine != nil {
+            setDeviceWindow()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        gameEngine.onDestroy()
+        if gameEngine != nil {
+            gameEngine.onDestroy()
+        }
     }
 
     override func didReceiveMemoryWarning() {

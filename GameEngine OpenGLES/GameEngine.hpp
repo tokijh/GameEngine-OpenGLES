@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <OpenGLES/ES3/gl.h>
+#include "GLES.hpp"
 
 class GameEngine {
     private :
