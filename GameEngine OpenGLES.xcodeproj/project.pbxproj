@@ -14,6 +14,9 @@
 		60575CC91EAF253900B8EDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60575CC71EAF253900B8EDE6 /* LaunchScreen.storyboard */; };
 		60575CD41EAF253900B8EDE6 /* GameEngine_OpenGLESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60575CD31EAF253900B8EDE6 /* GameEngine_OpenGLESTests.swift */; };
 		60575CDF1EAF253900B8EDE6 /* GameEngine_OpenGLESUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60575CDE1EAF253900B8EDE6 /* GameEngine_OpenGLESUITests.swift */; };
+		60575CF01EAF25CD00B8EDE6 /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CEE1EAF25CD00B8EDE6 /* GameEngine.cpp */; };
+		60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60575CF21EAF261000B8EDE6 /* GameEngineWrapper.mm */; };
+		60575CF61EAF269600B8EDE6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60575CF51EAF269600B8EDE6 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		60575CDA1EAF253900B8EDE6 /* GameEngine OpenGLESUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GameEngine OpenGLESUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60575CDE1EAF253900B8EDE6 /* GameEngine_OpenGLESUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine_OpenGLESUITests.swift; sourceTree = "<group>"; };
 		60575CE01EAF253900B8EDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60575CED1EAF25CD00B8EDE6 /* GameEngine OpenGLES-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameEngine OpenGLES-Bridging-Header.h"; sourceTree = "<group>"; };
+		60575CEE1EAF25CD00B8EDE6 /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
+		60575CEF1EAF25CD00B8EDE6 /* GameEngine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameEngine.hpp; sourceTree = "<group>"; };
+		60575CF11EAF261000B8EDE6 /* GameEngineWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngineWrapper.h; sourceTree = "<group>"; };
+		60575CF21EAF261000B8EDE6 /* GameEngineWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameEngineWrapper.mm; sourceTree = "<group>"; };
+		60575CF51EAF269600B8EDE6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60575CF61EAF269600B8EDE6 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 				60575CD21EAF253900B8EDE6 /* GameEngine OpenGLESTests */,
 				60575CDD1EAF253900B8EDE6 /* GameEngine OpenGLESUITests */,
 				60575CBC1EAF253900B8EDE6 /* Products */,
+				60575CF41EAF269600B8EDE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +108,10 @@
 		60575CBD1EAF253900B8EDE6 /* GameEngine OpenGLES */ = {
 			isa = PBXGroup;
 			children = (
+				60575CEC1EAF25B200B8EDE6 /* GameEngine */,
+				60575CED1EAF25CD00B8EDE6 /* GameEngine OpenGLES-Bridging-Header.h */,
+				60575CF11EAF261000B8EDE6 /* GameEngineWrapper.h */,
+				60575CF21EAF261000B8EDE6 /* GameEngineWrapper.mm */,
 				60575CBE1EAF253900B8EDE6 /* AppDelegate.swift */,
 				60575CC01EAF253900B8EDE6 /* ViewController.swift */,
 				60575CC21EAF253900B8EDE6 /* Main.storyboard */,
@@ -123,6 +138,23 @@
 				60575CE01EAF253900B8EDE6 /* Info.plist */,
 			);
 			path = "GameEngine OpenGLESUITests";
+			sourceTree = "<group>";
+		};
+		60575CEC1EAF25B200B8EDE6 /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				60575CEE1EAF25CD00B8EDE6 /* GameEngine.cpp */,
+				60575CEF1EAF25CD00B8EDE6 /* GameEngine.hpp */,
+			);
+			name = GameEngine;
+			sourceTree = "<group>";
+		};
+		60575CF41EAF269600B8EDE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60575CF51EAF269600B8EDE6 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +226,7 @@
 					60575CBA1EAF253900B8EDE6 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 46KGHHF73Q;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					60575CCE1EAF253900B8EDE6 = {
@@ -262,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60575CF01EAF25CD00B8EDE6 /* GameEngine.cpp in Sources */,
 				60575CC11EAF253900B8EDE6 /* ViewController.swift in Sources */,
 				60575CBF1EAF253900B8EDE6 /* AppDelegate.swift in Sources */,
+				60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,11 +452,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 46KGHHF73Q;
 				INFOPLIST_FILE = "GameEngine OpenGLES/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "timejh.com.GameEngine-OpenGLES";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GameEngine OpenGLES/GameEngine OpenGLES-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -430,11 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 46KGHHF73Q;
 				INFOPLIST_FILE = "GameEngine OpenGLES/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "timejh.com.GameEngine-OpenGLES";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GameEngine OpenGLES/GameEngine OpenGLES-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
