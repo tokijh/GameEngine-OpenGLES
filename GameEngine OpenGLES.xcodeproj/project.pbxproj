@@ -17,6 +17,7 @@
 		60575CF01EAF25CD00B8EDE6 /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CEE1EAF25CD00B8EDE6 /* GameEngine.cpp */; };
 		60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60575CF21EAF261000B8EDE6 /* GameEngineWrapper.mm */; };
 		60575CF61EAF269600B8EDE6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60575CF51EAF269600B8EDE6 /* OpenGLES.framework */; };
+		60575CF91EAF536200B8EDE6 /* GLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CF71EAF536200B8EDE6 /* GLES.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		60575CF11EAF261000B8EDE6 /* GameEngineWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngineWrapper.h; sourceTree = "<group>"; };
 		60575CF21EAF261000B8EDE6 /* GameEngineWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameEngineWrapper.mm; sourceTree = "<group>"; };
 		60575CF51EAF269600B8EDE6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		60575CF71EAF536200B8EDE6 /* GLES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLES.cpp; sourceTree = "<group>"; };
+		60575CF81EAF536200B8EDE6 /* GLES.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLES.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,7 @@
 			children = (
 				60575CEE1EAF25CD00B8EDE6 /* GameEngine.cpp */,
 				60575CEF1EAF25CD00B8EDE6 /* GameEngine.hpp */,
+				60575CFA1EAF5A2F00B8EDE6 /* GLES */,
 			);
 			name = GameEngine;
 			sourceTree = "<group>";
@@ -155,6 +159,15 @@
 				60575CF51EAF269600B8EDE6 /* OpenGLES.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60575CFA1EAF5A2F00B8EDE6 /* GLES */ = {
+			isa = PBXGroup;
+			children = (
+				60575CF71EAF536200B8EDE6 /* GLES.cpp */,
+				60575CF81EAF536200B8EDE6 /* GLES.hpp */,
+			);
+			name = GLES;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +312,7 @@
 				60575CC11EAF253900B8EDE6 /* ViewController.swift in Sources */,
 				60575CBF1EAF253900B8EDE6 /* AppDelegate.swift in Sources */,
 				60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */,
+				60575CF91EAF536200B8EDE6 /* GLES.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +570,7 @@
 				60575CE51EAF253900B8EDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60575CE61EAF253900B8EDE6 /* Build configuration list for PBXNativeTarget "GameEngine OpenGLESTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +579,7 @@
 				60575CE81EAF253900B8EDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60575CE91EAF253900B8EDE6 /* Build configuration list for PBXNativeTarget "GameEngine OpenGLESUITests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +588,7 @@
 				60575CEB1EAF253900B8EDE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
