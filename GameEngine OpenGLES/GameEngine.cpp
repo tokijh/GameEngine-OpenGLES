@@ -53,6 +53,9 @@ void GameEngine::onDraw() {
     // Init Triangle2D object
     static Triangle2D triangle2d = Triangle2D();
     
+    // Init Rectangle2D object
+    static Rectangle2D rectangle2d = Rectangle2D();
+    
     // Increase red color
     red_color = red_color + 0.01f;
     if (red_color > 1.0f) {
@@ -63,9 +66,15 @@ void GameEngine::onDraw() {
     glClearColor(red_color, 1.0f, 0.2f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Change red color on stap 
+    // Draw a Triangle2D
+    // Change red color on stap
     triangle2d.setColor({1.0f - red_color, 1.0f, 0.2f, 1.0f});
     triangle2d.draw();
+    
+    // Draw a Rectangle2D
+    // Change red color on stap
+    rectangle2d.setColor({red_color, 1.0f, 0.2f, 1.0f});
+    rectangle2d.draw();
 }
 
 void GameEngine::onTouch(int eventsCount, int **touchInfo) {
