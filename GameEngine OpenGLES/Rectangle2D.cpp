@@ -12,8 +12,11 @@ GLfloat Rectangle2D::vertexs[] = {
     0.5f, 0.5f, 0.0f,
     -0.5f, 0.5f, 0.0f,
     -0.5f, -0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f,
-    0.5f, 0.5f, 0.0f
+    0.5f, -0.5f, 0.0f
+};
+
+GLuint Rectangle2D::indexs[] = {
+    0, 1, 2, 3, 0
 };
 
 Rectangle2D::Rectangle2D() {
@@ -33,5 +36,5 @@ void Rectangle2D::draw() {
     
     glVertexAttribPointer(GLES::positionHandle, 3, GL_FLOAT, false, 0, vertexs);
     
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 5);
+    glDrawElements(GL_TRIANGLE_STRIP, sizeof(indexs) / sizeof(indexs[0]), GL_UNSIGNED_INT, indexs);
 }

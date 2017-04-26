@@ -14,6 +14,7 @@
 class Rectangle2D : public Object {
 private:
     static GLfloat vertexs[];
+    static GLuint indexs[];
 public:
     Rectangle2D();
     Rectangle2D(Vector4F color);
