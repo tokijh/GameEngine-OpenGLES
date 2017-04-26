@@ -50,12 +50,11 @@ void GameEngine::onDraw() {
     // To change red color
     static float red_color = 0.0f;
     
-    // Vertexs of a Triangle
-    static float triangle_vertexs[] = {
-        0.0f, 1.0f, 0.0f,
-        -1.0f, -1.0f, 0.0f,
-        1.0f, -1.0f, 0.0f
-    };
+    // Init Triangle2D object
+    static Triangle2D triangle2d = Triangle2D();
+    
+    // Init Rectangle2D object
+    static Rectangle2D rectangle2d = Rectangle2D();
     
     // Increase red color
     red_color = red_color + 0.01f;
@@ -64,15 +63,18 @@ void GameEngine::onDraw() {
     }
     
     // Clear background by color
-    glClearColor(1.0f, red_color, 0.2f, 1.0f);
+    glClearColor(red_color, 1.0f, 0.2f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Reverse color with background
-    glUniform4f(GLES::colorHandle, 1.0f, 1.0f - red_color, 0.2f, 1.0f);
+    // Draw a Triangle2D
+    // Change red color on stap
+    triangle2d.setColor({1.0f - red_color, 1.0f, 0.2f, 1.0f});
+    triangle2d.draw();
     
-    glVertexAttribPointer(GLES::positionHandle, 3, GL_FLOAT, false, 0, triangle_vertexs);
-    
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    // Draw a Rectangle2D
+    // Change red color on stap
+    rectangle2d.setColor({red_color, 1.0f, 0.2f, 1.0f});
+    rectangle2d.draw();
 }
 
 void GameEngine::onTouch(int eventsCount, int **touchInfo) {
