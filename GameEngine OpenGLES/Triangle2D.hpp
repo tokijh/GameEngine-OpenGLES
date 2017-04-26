@@ -14,6 +14,7 @@
 class Triangle2D : public Object {
 private:
     static GLfloat vertexs[];
+    static GLuint indexs[];
 public:
     Triangle2D();
     Triangle2D(Vector4F color);

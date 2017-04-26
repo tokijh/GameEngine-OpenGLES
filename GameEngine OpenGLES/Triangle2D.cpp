@@ -14,6 +14,10 @@ GLfloat Triangle2D::vertexs[] = {
     1.0f, -1.0f, 0.0f
 };
 
+GLuint Triangle2D::indexs[] = {
+    0, 1, 2
+};
+
 Triangle2D::Triangle2D() {
     color = {1.0f, 1.0f, 0.2f, 1.0f};
 }
@@ -31,5 +35,5 @@ void Triangle2D::draw() {
     
     glVertexAttribPointer(GLES::positionHandle, 3, GL_FLOAT, false, 0, vertexs);
     
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawElements(GL_TRIANGLES, sizeof(indexs) / sizeof(indexs[0]), GL_UNSIGNED_INT, indexs);
 }
