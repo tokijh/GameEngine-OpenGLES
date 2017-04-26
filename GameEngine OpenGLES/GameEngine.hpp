@@ -13,6 +13,7 @@
 #include <OpenGLES/ES3/gl.h>
 #include "GLES.hpp"
 #include "Triangle2D.hpp"
+#include "Rectangle2D.hpp"
 
 class GameEngine {
 private:

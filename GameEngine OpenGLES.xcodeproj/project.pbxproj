@@ -20,6 +20,7 @@
 		60575CF91EAF536200B8EDE6 /* GLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CF71EAF536200B8EDE6 /* GLES.cpp */; };
 		60575CFD1EAF702000B8EDE6 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575CFB1EAF702000B8EDE6 /* Object.cpp */; };
 		60575D021EAF70AB00B8EDE6 /* Triangle2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575D001EAF70AB00B8EDE6 /* Triangle2D.cpp */; };
+		60575D0C1EB04B2600B8EDE6 /* Rectangle2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60575D0A1EB04B2600B8EDE6 /* Rectangle2D.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		60575D051EAF717000B8EDE6 /* Vector3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
 		60575D061EAF71C800B8EDE6 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		60575D081EAF721300B8EDE6 /* Vector4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector4.h; sourceTree = "<group>"; };
+		60575D0A1EB04B2600B8EDE6 /* Rectangle2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle2D.cpp; sourceTree = "<group>"; };
+		60575D0B1EB04B2600B8EDE6 /* Rectangle2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rectangle2D.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,7 @@
 		60575CFE1EAF706B00B8EDE6 /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				60575D091EB04B1100B8EDE6 /* Rectangle2D */,
 				60575CFF1EAF709500B8EDE6 /* Triangle2D */,
 				60575CFB1EAF702000B8EDE6 /* Object.cpp */,
 				60575CFC1EAF702000B8EDE6 /* Object.hpp */,
@@ -224,6 +228,15 @@
 				60575D081EAF721300B8EDE6 /* Vector4.h */,
 			);
 			name = Vector4;
+			sourceTree = "<group>";
+		};
+		60575D091EB04B1100B8EDE6 /* Rectangle2D */ = {
+			isa = PBXGroup;
+			children = (
+				60575D0A1EB04B2600B8EDE6 /* Rectangle2D.cpp */,
+				60575D0B1EB04B2600B8EDE6 /* Rectangle2D.hpp */,
+			);
+			name = Rectangle2D;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +380,7 @@
 				60575D021EAF70AB00B8EDE6 /* Triangle2D.cpp in Sources */,
 				60575CF01EAF25CD00B8EDE6 /* GameEngine.cpp in Sources */,
 				60575CC11EAF253900B8EDE6 /* ViewController.swift in Sources */,
+				60575D0C1EB04B2600B8EDE6 /* Rectangle2D.cpp in Sources */,
 				60575CFD1EAF702000B8EDE6 /* Object.cpp in Sources */,
 				60575CBF1EAF253900B8EDE6 /* AppDelegate.swift in Sources */,
 				60575CF31EAF261000B8EDE6 /* GameEngineWrapper.mm in Sources */,
